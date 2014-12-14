@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Joined at:</strong>
+  <%= @joining.joined_at %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @joining.reason %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @joining.user_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @joining.group_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @joining.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @joining.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_joining_path(@joining) %> |
+<%= link_to 'Back', joinings_path %>

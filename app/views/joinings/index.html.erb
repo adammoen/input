@@ -1,0 +1,35 @@
+<h1>Listing joinings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Joined at</th>
+      <th>Reason</th>
+      <th>User</th>
+      <th>Group</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @joinings.each do |joining| %>
+      <tr>
+        <td><%= joining.joined_at %></td>
+        <td><%= joining.reason %></td>
+        <td><%= joining.user_id %></td>
+        <td><%= joining.group_id %></td>
+        <td><%= joining.created_at %></td>
+        <td><%= joining.updated_at %></td>
+        <td><%= link_to 'Show', joining %></td>
+        <td><%= link_to 'Edit', edit_joining_path(joining) %></td>
+        <td><%= link_to 'Destroy', joining, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Joining', new_joining_path %>
